@@ -1,4 +1,53 @@
 from turtle import *
-screen = Screen()
-screen.setup(300,200.2000,100)
-screen.update
+screen = Screen() #make screen
+screen.setup(300,200.2000,100) #change size and position
+screen.bgcolor("pink") #set background color
+
+#or screen.bgcolor((8/255,20/255,100/255)) #tuple RBG color
+
+screen.update()
+#make turtle make a star
+star = Turtle()
+star.color("white",(180./255,254./255, 75./255))
+star.width(5)
+star.turtlesize(2)
+star.up()
+
+#star angles: point angle-36 degrees and inside angle - 252 degrees
+
+length = 200
+turn = 180-36
+star.begin_fill()
+star.forward(length)
+star.left(turn)
+star.forward(length)
+star.left(turn)
+star.forward(length)        
+star.left(turn)
+star.forward(length)
+star.left(turn)
+star.forward(length)
+star.left(turn)
+star.end_fill()
+
+#make 2nd turtle make stamped patterns
+Stamp = Turtle()
+Stamp.shape("turtle")
+Stamp.turtlesize(3)
+Stamp.color("yellow", "yellow")
+Stamp.up()
+
+Stamp.goto((80,47))
+Stamp.stamp()
+Stamp.goto((82,33))
+
+Stamp.clear()
+Stamp.hideturtle()
+
+star.clear()
+
+#clear on turtle's drawings
+#clear everything
+#reset kernel
+
+screen.clear()
